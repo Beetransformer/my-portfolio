@@ -1,0 +1,380 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+* {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    background: #010b20; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #f4f6fc;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #010b20;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#navbar .brand {
+    font-size: 22px;
+    font-weight: 700;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    color: #F0F8FF; 
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#navbar .brand i {
+    font-size: 18px; 
+    margin-right: 10px; 
+}
+
+#navbar .nav-links {
+    display: flex;
+}
+
+#navbar .nav-links .nav-link {
+    color: #D3D3D3; 
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative; 
+    transition: color 0.3s;
+}
+
+#navbar .nav-links .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 2px;
+    background: aliceblue; 
+    transition: width 0.3s; 
+}
+
+#navbar .nav-links .nav-link:hover,
+#navbar .nav-links .nav-link.active {
+    color: #F0F8FF; 
+}
+
+#navbar .nav-links .nav-link:hover::after,
+#navbar .nav-links .nav-link.active::after {
+    width: 50%; 
+}
+
+#content {
+    padding-top: 66px; 
+    text-align: center; 
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcfcfc; 
+    padding: 25px;
+}
+
+.image-section .profile {
+    flex: 1;
+    position: relative;
+}
+
+.image-section .profile img {
+    width: 90%;
+    height: 360px;
+    border-radius: 0%; 
+    position: relative;
+    padding: 20px; 
+}
+
+.image-section .profile::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: rgba(6, 24, 61, 0.993); 
+    z-index: -1; 
+}
+
+.image-section .text-section {
+    flex: 1;
+    padding: 0 20px; 
+    text-align: center; 
+    margin-left: -50px;
+}
+
+.image-section .welcome {
+    font-size: 40px; 
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none; 
+    color: #010b20; 
+}
+
+.image-section .hi {
+    font-size: 32px; 
+    text-decoration: none;
+    color: #010b20;
+   
+
+    margin-bottom: 50px; 
+
+
+}
+
+.image-section .text-section .icon {
+    color: #5e636d9d;
+    font-family: 'Merriweather', serif;
+    font-size: 0.5em;
+    text-align: center;
+    font-style: italic;
+    position: relative; 
+}
+
+.quote {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.quote p {
+    font-style: none; 
+    color: rgba(6, 24, 61, 0.993); 
+    font-family: 'Merriweather', serif; 
+    font-size: 1.0em; 
+    text-align: center; 
+    margin-bottom: 40px; 
+    position: relative; 
+}
+
+.quote-line {
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 20%; 
+    height: 2px;
+    background-color: rgba(6, 24, 61, 0.993); 
+}
+
+.quote-line2 {
+    position: absolute;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 20%; 
+    height: 2px;
+    background-color: rgba(6, 24, 61, 0.993); 
+}
+
+
+.content-section {
+    margin-bottom: 50px; 
+}
+
+.content-section h1 {
+    text-decoration: underline; 
+    margin-bottom: 20px; 
+   
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 40px; 
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+    width: 400px; 
+    max-width: 500px; 
+    height: 400px; 
+    border-radius: 10px; 
+}
+
+.about-paragraph {
+    flex: 1;
+    margin: 0;
+    text-align: center; 
+}
+
+
+@media (max-width: 768px) {
+    .about-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-paragraph {
+        margin-top: 20px;
+        align-items: center; 
+    }
+
+    .about-image {
+        width: 100%; 
+        max-width: 400px; 
+        height: auto; 
+    }
+}
+
+
+.skills-text {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px; 
+}
+
+ul li::before {
+    display: none; 
+}
+
+.icon:hover {
+    transform: translateY(-20px);
+    color: #fffb00; 
+}
+
+
+.portfolio-text .column {
+    text-align: center;
+}
+
+.portfolio-text .column h2 {
+    margin-top: 0; 
+}
+
+.portfolio-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-text .column {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.portfolio-text .column img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-text {
+        flex-direction: column;
+    }
+
+    .portfolio-text .column {
+        margin-bottom: 20px;
+    }
+}
+
+
+.portfolio-text .column {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: rgba(6, 24, 61, 0.993);
+}
+
+.portfolio-text .column-1 {
+    background-color: white; 
+}
+
+.portfolio-text .column-2 {
+    background-color: white; 
+}
+
+.portfolio-text .column-3 {
+    background-color: white; 
+}
+
+
+
+.contact-text {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 10px 0;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .contact-text {
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}
